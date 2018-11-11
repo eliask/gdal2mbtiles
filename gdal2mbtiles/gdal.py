@@ -36,9 +36,21 @@ from xml.etree import ElementTree
 import numpy
 
 from osgeo import gdal, gdalconst, osr
-from osgeo.gdalconst import (GA_ReadOnly, GRA_Bilinear, GRA_Cubic,
-                             GRA_CubicSpline, GRA_Lanczos,
-                             GRA_NearestNeighbour)
+from osgeo.gdalconst import (
+    GA_ReadOnly,
+    GRA_NearestNeighbour,
+    GRA_Bilinear,
+    GRA_Cubic,
+    GRA_CubicSpline,
+    GRA_Lanczos,
+    GRA_Average,
+    GRA_Mode,
+    GRA_Max,
+    GRA_Min,
+    GRA_Med,
+    GRA_Q1,
+    GRA_Q3,
+)
 
 try:
   basestring
@@ -68,6 +80,13 @@ RESAMPLING_METHODS = {
     GRA_Cubic: 'cubic',
     GRA_CubicSpline: 'cubicspline',
     GRA_Lanczos: 'lanczos',
+    GRA_Average: 'average',
+    GRA_Mode: 'mode',
+    GRA_Max: 'max',
+    GRA_Min: 'min',
+    GRA_Med: 'med',
+    GRA_Q1: 'Q1',
+    GRA_Q3: 'Q3',
 }
 
 
